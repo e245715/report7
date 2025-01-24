@@ -5,10 +5,10 @@ void highScoreOrder(int array[],int size){
     //配列の要素文
     for (int i=0; i<size-1; i++){
         for (int j=0; j<size-1;j++){
-            if(array[j] < array[j+1]){         //例えば要素４と要素５は　100 > 90 でこの条件を満たす
-                int Replacement = array[j];    // Replacement という変数に100を代入
-                array[j] = array[j+1];         //array[4] = （インデント５の数値）
-                array[j+1] = Replacement;      //array[5] = 100(=Replacement)
+            if(array[j] < array[j+1]){         
+                int Replacement = array[j];    
+                array[j] = array[j+1];         
+                array[j+1] = Replacement;      
             }
         }
     }
@@ -17,12 +17,13 @@ void highScoreOrder(int array[],int size){
 
 
 
+
 int main(){
-    const int SIZE = 5; //定数として配列のサイズを宣言                          
-    int scores[SIZE] = {0, 60, 70, 100, 90};
+    const int SIZE = 6; //定数として配列のサイズを宣言                          
+    int scores[SIZE] = {100, 60, 70, 100, 90, 80};
 
     // 関数呼び出し時には、引数として配列名をそのまま記述する。
-    //print_array(scores, SIZE);
+   
     printf("scores = ");
     for(int i=0; i<SIZE; i++){
         printf("%d ",scores[i]);
@@ -35,7 +36,7 @@ int main(){
         printf("%d ",scores[i]);
     }
 
-    //処理コード
+    
 
     return 0;
     
@@ -48,3 +49,4 @@ int main(){
     
     
 */
+
